@@ -64,33 +64,59 @@
     </div>
 
     <div class="gallery">
-      <a href="MEDIA/som enpåminnelse_kompr.jpg"
-        class="gallery-item"><img src="MEDIA/som enpåminnelse_kompr.jpg"
-          alt="Image 1"></a>
-      <a href="MEDIA/som enpåminnelse_kompr.jpg"
-        class="gallery-item"><img src="MEDIA/som enpåminnelse_kompr.jpg"
-          alt="Image 2"></a>
-      <a href="MEDIA/som enpåminnelse_kompr.jpg"
-        class="gallery-item"><img src="MEDIA/som enpåminnelse_kompr.jpg"
-          alt="Image 3"></a>
-      <a href="MEDIA/som enpåminnelse_kompr.jpg"
-        class="gallery-item"><img src="MEDIA/som enpåminnelse_kompr.jpg"
-          alt="Image 4"></a>
-      <a href="MEDIA/som enpåminnelse_kompr.jpg"
-        class="gallery-item"><img src="MEDIA/som enpåminnelse_kompr.jpg"
-          alt="Image 5"></a>
-      <a href="MEDIA/som enpåminnelse_kompr.jpg"
-        class="gallery-item"><img src="MEDIA/som enpåminnelse_kompr.jpg"
-          alt="Image 6"></a>
-      <a href="MEDIA/som enpåminnelse_kompr.jpg"
-        class="gallery-item"><img src="MEDIA/som enpåminnelse_kompr.jpg"
-          alt="Image 7"></a>
-      <a href="MEDIA/som enpåminnelse_kompr.jpg"
-        class="gallery-item"><img src="MEDIA/som enpåminnelse_kompr.jpg"
-          alt="Image 8"></a>
-      <a href="MEDIA/som enpåminnelse_kompr.jpg"
-        class="gallery-item"><img src="MEDIA/som enpåminnelse_kompr.jpg"
-          alt="Image 9"></a>
+      <div class="gallery-item">
+        <a href="MEDIA/som enpåminnelse_kompr.jpg"><img src="MEDIA/som enpåminnelse_kompr.jpg"
+            alt="Image 1"></a>
+        <span class="image-title">Title 1</span>
+      </div>
+
+      <div class="gallery-item">
+        <a href="MEDIA/som enpåminnelse_kompr.jpg"><img src="MEDIA/som enpåminnelse_kompr.jpg"
+            alt="Image 2"></a>
+        <span class="image-title">Title 2</span>
+      </div>
+
+      <div class="gallery-item">
+        <a href="MEDIA/som enpåminnelse_kompr.jpg"><img src="MEDIA/som enpåminnelse_kompr.jpg"
+            alt="Image 3"></a>
+        <span class="image-title">Title 3</span>
+      </div>
+
+      <div class="gallery-item">
+        <a href="MEDIA/som enpåminnelse_kompr.jpg"><img src="MEDIA/som enpåminnelse_kompr.jpg"
+            alt="Image 4"></a>
+        <span class="image-title">Title 4</span>
+      </div>
+
+      <div class="gallery-item">
+        <a href="MEDIA/som enpåminnelse_kompr.jpg"><img src="MEDIA/som enpåminnelse_kompr.jpg"
+            alt="Image 1"></a>
+        <span class="image-title">Title 5</span>
+      </div>
+
+      <div class="gallery-item">
+        <a href="MEDIA/som enpåminnelse_kompr.jpg"><img src="MEDIA/som enpåminnelse_kompr.jpg"
+            alt="Image 1"></a>
+        <span class="image-title">Title 6</span>
+      </div>
+
+      <div class="gallery-item">
+        <a href="MEDIA/som enpåminnelse_kompr.jpg"><img src="MEDIA/som enpåminnelse_kompr.jpg"
+            alt="Image 1"></a>
+        <span class="image-title">Title 7</span>
+      </div>
+
+      <div class="gallery-item">
+        <a href="MEDIA/som enpåminnelse_kompr.jpg"><img src="MEDIA/som enpåminnelse_kompr.jpg"
+            alt="Image 1"></a>
+        <span class="image-title">Title 8</span>
+      </div>
+
+      <div class="gallery-item">
+        <a href="MEDIA/som enpåminnelse_kompr.jpg"><img src="MEDIA/som enpåminnelse_kompr.jpg"
+            alt="Image 1"></a>
+        <span class="image-title">Title 9 </span>
+      </div>
 
       <!-- Repeat for other images -->
     </div>
@@ -109,7 +135,8 @@
       galleryItems.forEach(function (item) {
         item.addEventListener('click', function (e) {
           e.preventDefault();
-          var imgSrc = item.href;
+          var anchor = item.querySelector('a');
+          var imgSrc = anchor ? anchor.href : '';
           var img = document.createElement('img');
           img.src = imgSrc;
           overlay.innerHTML = '';
@@ -122,6 +149,7 @@
         overlay.style.display = 'none';
       });
     });
+
   </script>
 
 </body>

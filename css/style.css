@@ -65,7 +65,7 @@ header {
 .gallery img {
   width: 100%;
   height: auto;
-  border-radius: 8px;
+  /*border-radius: 8px;*/ /* Add a border radius to the images */
 }
 
 /* Full-size overlay styles */
@@ -87,3 +87,18 @@ header {
   margin: 5% auto;
   display: block;
 }
+
+.gallery-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-title {
+  font-size: 1rem;
+  color: #E2B716; /* Match the existing text color */
+  margin-top: 8px; /* Add some space between the image and the title */
+  text-align: center;
+}
+
